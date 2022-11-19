@@ -112,3 +112,11 @@
 	border: 1px solid var(--text-secondary-color);
 	border-radius: .75rem;
 }
+
+.keynote {
+	position: absolute;
+	right: 2%;
+	top: 5%;
+	width: 20px;
+	height: 20px;
+}
