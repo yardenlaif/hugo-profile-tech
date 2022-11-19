@@ -75,8 +75,11 @@
 							{{ .slides.title | default "Slides" }}
 						</a>
 						{{ end }}
-						{{ if not (or .video .slides) }}
+						{{ if .comingsoon }}
 							Coming soon...
+						{{ end }}
+						{{ if not (or (or .comingsoon .video) .slides) }}
+						<div style="padding: 2px;" />
 						{{ end }}
 
 					</div>
