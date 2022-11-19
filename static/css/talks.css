@@ -121,3 +121,15 @@
 	width: 20px;
 	height: 20px;
 }
+
+.keynote-tooltip {
+visibility: hidden;
+  padding: 5px;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.keynote:hover .keynote-tooltip {
+	transition-delay: 0.5s;
+  visibility: visible;
+}
