@@ -99,7 +99,7 @@ header .navbar.animate {
 
 #hero h3 {
 	font-size: clamp(40px, 8vw, 60px);
-	/* color: var(--primary-color) !important; */
+	color: var(--primary-color) !important;
 	opacity: 0.5;
 }
 
@@ -473,122 +473,6 @@ header .navbar.animate {
 	opacity: 0.8;
 }
 
-/* Talks */
-.moment-content{
-    position: relative;
-}
-
-.moment-row{
-    margin-bottom: 20px;
-}
-
-#talks .container{
-    max-width: 760px;
-    margin: auto;
-}
-
-@media (max-width: 720px) {
-    .moment-row{
-        margin-bottom: 20px;
-    }
-
-    .moments-container{
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-}
-
-.moment-context{
-    clear: left;
-    margin-bottom: 10px;
-	text-decoration: none;
-}
-
-.moment-context:hover{
-	color: blue;
-	text-decoration: underline;
-}
-
-.pure-g [class*=pure-u]{
-    font-family: "Alata", sans-serif;
-    font-weight: medium;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-.moment-time{
-    text-align: right;
-    padding-right: 60px;
-    /* white-space: nowrap; */
-    font-weight: 300;
-    margin-bottom: 20px;
-}
-
-.moment-time .moment-month-day{
-	font-size: 24px;
-	margin-bottom: 10px;
-}
-
-.moment-time .moment-year{
-	font-size: 16px;
-}
-
-@media (max-width: 576px){
-    .moment-time{
-        text-align: center;
-        padding-right: 15px;
-		display: inline;
-    }
-}
-@media (max-width: 720px) and (min-width:576px){
-    .moment-time{
-        padding-right: 20px;
-    }
-}
-
-.moment-user-info{
-    display: flex;
-}
-
-.moment-user-info .moment-avatar{
-	max-height: 45px;
-	float: left;
-	margin-bottom: 10px;
-}
-
-.moment-user-info    .moment-intro{
-	float: left;
-	padding-left: 5px;
-	padding-bottom: 5px;
-}
-
-.moment-user-info .moment-intro .moment-name{
-	/* color:#186D9C!important; */
-	margin-bottom: 0;
-	line-height: 1.1;
-	font-size: 24px;
-}
-
-.moment-user-info .moment-intro .moment-tag{
-	font-size: 80%;
-	margin-left: 0px;
-	margin-right: 10px;
-	color: #6c757d!important;
-}
-
-.moment-links {
-	margin: 5px;
-}
-
-.moment-link {
-	padding-bottom:10px; 
-	padding-top:10px; 
-	word-wrap: break-word;
-	text-decoration: none;
-	color:var(--text-secondary-color);
-	border: 1px solid var(--text-secondary-color);
-	border-radius: .75rem;
-}
 
 /* achievements */
 
