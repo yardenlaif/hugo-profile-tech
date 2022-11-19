@@ -48,8 +48,14 @@
 						{{ end }}
 						<div class="conference-title">
 							<div class="conference-name">{{ .title }}</div>
+							{{ if .conference.url }}
 							<a href="{{ .conference.url }}" class="conference-link" target="_blank"
 								style="color: {{ .conference.color }};">{{ .conference.name }}</a>
+							{{ else }}
+							<div style="color: {{ .conference.color }};">
+								{{ .conference.name }}
+							</div>
+							{{ end }}
 						</div>
 					</div>
 
