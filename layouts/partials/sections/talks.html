@@ -5,45 +5,42 @@
 		<h1>{{ .Site.Params.talks.title | default "Talks" }}<h1>
 	</div>
 	{{ range $index, $element := .Site.Params.talks.items }}
-	<div class="moment-row">
+	<div class="talk">
 		<div class="pure-g">
 			{{/* time info shown in the left (or above in small screens) */}}
 			<div class="pure-u-1 pure-u-sm-1-4">
-				<div class="moment-time">
+				<div class="date">
 					{{ $date := (time .conference.date) }}
-					<div class="moment-month-day">{{ $date.Format "Jan 2" }}{{ if in (slice 1 21 31) $date.Day }}st{{
+					<div class="date-top">{{ $date.Format "Jan 2" }}{{ if in (slice 1 21 31) $date.Day }}st{{
 						else if in (slice 2 22) $date.Day }}nd{{ else if in (slice 3 23) $date.Day }}rd{{ else }}th{{
 						end }}
 					</div>
-					<div class="moment-year">{{ $date.Format "2006" }}</div>
+					<div class="date-bottom">{{ $date.Format "2006" }}</div>
 				</div>
 			</div>
 
-			{{/* moment-main-content */}}
 			<div class="pure-u-1 pure-u-sm-3-4">
-				<div class="moment-content">
-					<div class="moment-user-info">
+				<div class="content">
+					<div class="info">
 						{{ if .conference.logo }}
-						<div class="moment-avatar-block">
 							{{ with .conference.logo }}
-							<img src='{{ . }}' class="moment-avatar">
+							<img src='{{ . }}' class="conference-logo">
 							{{ else }}
 							{{/* fixme check whether the default avatar path is url or not */}}
-							<img src='{{ $.Site.BaseURL }}/{{ .Site.Params.avatar }}' class="moment-avatar">
+							<img src='{{ $.Site.BaseURL }}/{{ .Site.Params.avatar }}' class="conference-logo">
 							{{ end }}
-						</div>
 						{{ end }}
-						<div class="moment-intro">
-							<div class="moment-name">{{ .title }}</div>
-							<a href="{{ .conference.url }}" class="moment-context"
+						<div class="conference-title">
+							<div class="conference-name">{{ .title }}</div>
+							<a href="{{ .conference.url }}" class="conference-link"
 								style="color: {{ .conference.color }};">{{ .conference.name }}</a>
 						</div>
 					</div>
 
 
-					<div class="moment-links">
+					<div class="links">
 <style>
-.moment-link-{{ $index }}:hover {
+.talk-link-{{ $index }}:hover {
 	border: 2px solid;
 	padding: 9px 11px 9px 11px;
 	border-color: var(--text-color) !important;
@@ -53,12 +50,12 @@
 
 </style>
 						{{ if .video }}
-						<a href="{{ .video.url }}" target="_blank" class="moment-link-{{ $index }} moment-link btn">
+						<a href="{{ .video.url }}" target="_blank" class="talk-link-{{ $index }} talk-link btn">
 							{{ .video.title | default "Video" }}
 						</a>
 						{{ end }}
 						{{ if .slides }}
-						<a href="{{ .slides.url }}" target="_blank" class="moment-link-{{ $index }} moment-link btn">
+						<a href="{{ .slides.url }}" target="_blank" class="talk-link-{{ $index }} talk-link btn">
 							{{ .slides.title | default "Slides" }}
 						</a>
 						{{ end }}
