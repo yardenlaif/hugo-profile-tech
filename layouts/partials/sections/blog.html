@@ -1,0 +1,39 @@
+{{ if .Site.Params.blog.enable | default false }}
+
+<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/blogs.css" media="all">
+<section id="blog" class="container">
+	<div class="title">
+		<h1>{{ .Site.Params.blog.title | default "Blog" }}<h1>
+	</div>
+	{{ range $index, $element := .Site.Params.blog.posts }}
+	<article class="article-overlapped-list row align-items-center mb-5">
+		<div class="col-md-6">
+			<a href="www.yardenlaif.com/">
+				<img loading="lazy" class="w-100"
+					src="https://demo.gethugothemes.com/northendlab/site/images/post/post-3.jpg" alt="post-image">
+			</a>
+		</div>
+		<div class="col-md-6">
+			<div class="card-block">
+				<h2 class="h4">
+					<a class="post-title" href="https://demo.gethugothemes.com/northendlab/site/posts/post-4/">{{ .title
+						}}</a>
+				</h2>
+				<p>
+					{{ .description }}
+				</p>
+				<div class="mt-3 post-meta">
+					{{ $date := (time .date) }}
+					{{ $date.Format "Jan 2, 2006" }}
+					{{ range $i, $tag := .tags }}
+					<span class="mx-1">|</span>
+					{{ .tag }}
+					{{ end }}
+				</div>
+			</div>
+		</div>
+	</article>
+	{{ end }}
+</section>
+
+{{ end }}

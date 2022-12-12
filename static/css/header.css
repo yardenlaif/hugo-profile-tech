@@ -32,6 +32,8 @@ header .nav-link{
     transition: none !important;
 }
 .navbar-brand {
+	font-size: 40px;
+	text-align: center;
     color: var(--primary-color) !important;
     opacity: 0.95;
 } 

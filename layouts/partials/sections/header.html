@@ -29,7 +29,7 @@
             <!-- navbar brand -->
             <a class="navbar-brand primary-font text-wrap" href="{{ .Site.BaseURL | relURL }}">
                 {{ if or (.Site.Params.favicon) (.Site.Params.navbar.brandLogo) }}
-                <img src="{{ .Site.Params.navbar.brandLogo | default .Site.Params.favicon }}" width="30" height="30"
+                <img class="navbar-img" src="{{ .Site.Params.navbar.brandLogo | default .Site.Params.favicon }}" width="60" height="60"
                     class="d-inline-block align-top">
                 {{ .Site.Params.navbar.brandName | default .Site.Params.title }}
                 {{ else }}
@@ -54,17 +54,10 @@
                     </li>
                     {{ end }}
 
-                    {{ if and (.Site.Params.experience.enable | default false) (not (.Site.Params.navbar.menus.disableExperience | default false)) }}
+                    {{ if and (.Site.Params.talks.enable | default false) (not (.Site.Params.navbar.menus.disableTalks | default false)) }}
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#experience"
-                            aria-label="experience">Experience</a>
-                    </li>
-                    {{ end }}
-
-                    {{ if and (.Site.Params.education.enable | default false) (not (.Site.Params.navbar.menus.disableEducation | default false)) }}
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#education"
-                            aria-label="education">Education</a>
+                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#talks"
+                            aria-label="talks">Talks</a>
                     </li>
                     {{ end }}
 
@@ -123,10 +116,10 @@
                 {{ if (not .Site.Params.theme.disableThemeToggle) }}
                 <div class="text-center">
                     <button id="theme-toggle">
-                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg style="transform: translateY(-25%);" id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                         </svg>
-                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg style="transform: translateY(-25%);" id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="5"></circle>
                             <line x1="12" y1="1" x2="12" y2="3"></line>
                             <line x1="12" y1="21" x2="12" y2="23"></line>
