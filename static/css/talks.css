@@ -1,158 +1,158 @@
 /* Talks */
-.content{
-	position: relative;
+.content {
+  position: relative;
 }
 
 .separating_line {
-	margin-top: 20px;
-	margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #talks .title {
-	font-family: "Alata", sans-serif;
-	text-align: center;
-	padding-bottom: 48px;
+  font-family: 'Alata', sans-serif;
+  text-align: center;
+  padding-bottom: 48px;
 }
 
-#talks .container{
-	max-width: 760px;
-	margin: auto;
+#talks .container {
+  max-width: 760px;
+  margin: auto;
 }
 
 @media (max-width: 720px) {
-	.talk{
-		margin-bottom: 20px;
-	}
+  .talk {
+    padding-bottom: 20px;
+  }
 
-	#talks .container{
-		padding-left: 10px;
-		padding-right: 10px;
-	}
+  #talks .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
-.conference-link{
-	clear: left;
-	margin-bottom: 10px;
-	text-decoration: none;
+.conference-link {
+  clear: left;
+  margin-bottom: 10px;
+  text-decoration: none;
 }
 
-.conference-link:hover{
-	text-decoration: underline;
+.conference-link:hover {
+  text-decoration: underline;
 }
 
-.pure-g [class*=pure-u]{
-	font-family: "Alata", sans-serif;
-	font-weight: medium;
-	font-size: 16px;
-	line-height: 24px;
+.pure-g [class*='pure-u'] {
+  font-family: 'Alata', sans-serif;
+  font-weight: medium;
+  font-size: 16px;
+  line-height: 24px;
 }
 
-.date{
-	text-align: right;
-	padding-right: 60px;
-	/* white-space: nowrap; */
-	font-weight: 300;
-	margin-bottom: 20px;
+.date {
+  text-align: right;
+  padding-right: 60px;
+  /* white-space: nowrap; */
+  font-weight: 300;
+  margin-bottom: 20px;
 }
 
-.date .date-top{
-	font-size: 24px;
-	margin-bottom: 10px;
+.date .date-top {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.date .date-bottom{
-	font-size: 16px;
+.date .date-bottom {
+  font-size: 16px;
 }
 
-@media (max-width: 576px){
-	.date{
-		text-align: center;
-		padding-right: 15px;
-		display: flex;
-		align-content: baseline;
-	}
+@media (max-width: 576px) {
+  .date {
+    text-align: center;
+    padding-right: 15px;
+    display: flex;
+    align-content: baseline;
+  }
 
-	.date .date-top{
-		font-size: 20px;
-		margin-bottom: 0;
-	}
+  .date .date-top {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
 
-	.date .date-bottom{
-		padding-left: 6px;
-		font-size: 20px;
-	}
+  .date .date-bottom {
+    padding-left: 6px;
+    font-size: 20px;
+  }
 }
 
-@media (max-width: 720px) and (min-width:576px){
-	.date{
-		padding-right: 20px;
-	}
+@media (max-width: 720px) and (min-width: 576px) {
+  .date {
+    padding-right: 20px;
+  }
 }
 
-.info{
-	display: flex;
+.info {
+  display: flex;
 }
 
-.info .conference-logo{
-	max-height: 45px;
-	float: left;
-	margin-bottom: 10px;
+.info .conference-logo {
+  max-height: 45px;
+  float: left;
+  margin-bottom: 10px;
 }
 
-.info .conference-title{
-	float: left;
-	padding-left: 5px;
-	padding-bottom: 5px;
-	margin-left: 5px;
+.info .conference-title {
+  float: left;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  margin-left: 5px;
 }
 
-.info .conference-title .conference-name{
-	margin-bottom: 0;
-	line-height: 1.1;
-	font-size: 24px;
+.info .conference-title .conference-name {
+  margin-bottom: 0;
+  line-height: 1.1;
+  font-size: 24px;
 }
 
 .links {
-	margin: 5px;
+  margin: 5px;
 }
 
 .talk-link {
-	margin-right: 5px;
-	padding-bottom:10px; 
-	padding-top:10px; 
-	word-wrap: break-word;
-	text-decoration: none;
-	color:var(--text-secondary-color);
-	border: 1px solid var(--text-secondary-color);
-	border-radius: .75rem;
+  margin-right: 5px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  word-wrap: break-word;
+  text-decoration: none;
+  color: var(--text-secondary-color);
+  border: 1px solid var(--text-secondary-color);
+  border-radius: 0.75rem;
 }
 
 .talk-icon {
-	position: absolute;
-	right: 2%;
-	top: 5%;
-	width: 20px;
-	height: 20px;
+  position: absolute;
+  right: 2%;
+  top: 5%;
+  width: 20px;
+  height: 20px;
 }
 
 .talk-icon-tooltip {
-	visibility: hidden;
+  visibility: hidden;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
 .talk-icon:hover .talk-icon-tooltip {
-	transition-delay: 0.5s;
-	visibility: visible;
+  transition-delay: 0.5s;
+  visibility: visible;
 }
 
 @media (max-width: 720px) {
-	.talk-icon-tooltip {
-		padding-top: 20px;
-		right: 0%;
-		position: absolute;
-	}
+  .talk-icon-tooltip {
+    padding-top: 20px;
+    right: 0%;
+    position: absolute;
+  }
 
-	.talk-icon:hover .talk-icon-tooltip {
-		transition-delay: 0s;
-	}
+  .talk-icon:hover .talk-icon-tooltip {
+    transition-delay: 0s;
+  }
 }
